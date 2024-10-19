@@ -5,42 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Degens With Attitude | degenswithattitude.com</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            /* box-sizing: border-box; */
-        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: black;
             color: white;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            margin-bottom: 20px;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 30px;
         }
         img {
             margin-top: 20px;
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
         h1 {
             font-size: 2rem;
+        }
+        .collection-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 700px;
+        }
+        .collection {
+            border-radius: 10px;
+            width: 500px;
+            padding: 10px;
+            border: 1px solid #333;
+            margin: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="images/logo.jpg" alt="Degens With Attitude" style="width: 50%; height: auto;"><br/><br/>
-        <!-- <img src="images/video.gif" alt="Degens With Attitude" style="width: 200px;"> -->
+        <img src="images/logo.jpg" alt="Degens With Attitude" style="width: 750px; height: auto;"><br/><br/>
+
+        <div class="collection-container">
+        <img src="images/1.jpg" class="collection"/>
+        <img src="images/2.jpg" class="collection"/>
+        <img src="images/3.jpg" class="collection"/>
+        <img src="images/4.jpg" class="collection"/>
+        <img src="images/5.jpg" class="collection"/>
+        </div>
+
+        <img src="images/video.gif" alt="Degens With Attitude" style="margin-bottom: 30px; width: 200px;">
+
     </div>
 </body>
 </html>
