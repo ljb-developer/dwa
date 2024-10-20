@@ -117,7 +117,7 @@
         <img src="images/24.jpg" class="collection"/>
         </div>
 
-        <img src="images/video.gif" alt="Degens With Attitude" style="margin-bottom: 30px; width: 30%; border-radius: 10px; box-shadow: 0px 0px 60px rgba(140, 140, 140, 0.1), 0px 0px 100px rgba(140, 140, 140, 0.1);">
+        <a href="#start" id="play-btn2"><img src="images/video.gif" alt="Degens With Attitude" style="margin-bottom: 30px; width: 30%; border-radius: 10px; box-shadow: 0px 0px 60px rgba(140, 140, 140, 0.1), 0px 0px 100px rgba(140, 140, 140, 0.1);"></a>
 
         <div class="social-container">
             <a href="https://dexscreener.com/base/0x57d84e011cbd93075ef243341a91e9358e2ba2a3"><img src="images/dexscreener.jpg" class="dex"></a>
@@ -135,13 +135,20 @@
       <script>
         const audio = document.getElementById('background-music');
         const playButton = document.getElementById('play-btn');
-    
+        const playButton2 = document.getElementById('play-btn2');
+
         playButton.addEventListener('click', () => {
           audio.play().catch(error => {
             console.error('Playback failed', error);
-          });
-          
+          })
         });
+
+        playButton2.addEventListener('click', () => {
+          audio.play().catch(error => {
+            console.error('Playback failed', error);
+          })
+        });
+
       </script>
 
 </body>
