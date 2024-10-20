@@ -75,12 +75,21 @@
       width: 200px !important;
       filter: grayscale(100%) brightness(180%);
     }
+    a:link {
+        text-decoration: none;
+    }
+    a:visited {
+        text-decoration: none;
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="images/logo.jpg" alt="Degens With Attitude" style="width: 70%; height: auto;"><br/><br/>
 
+
+      
+    <div class="container">
+        <a href="#start"><img src="images/logo.jpg" alt="Degens With Attitude" style="width: 70%; height: auto; cursor: pointer;" id="play-btn"></a><br/><br/>
+        <div id="start" style="visibility: hidden;">---</div>
         <div class="collection-container">
         <img src="images/1.jpg" class="collection"/>
         <img src="images/9.jpg" class="collection"/>
@@ -118,5 +127,22 @@
             </div>
 
     </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="urban-oasis-abbynoise-main-version-27458-02-27.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <script>
+        const audio = document.getElementById('background-music');
+        const playButton = document.getElementById('play-btn');
+    
+        playButton.addEventListener('click', () => {
+          audio.play().catch(error => {
+            console.error('Playback failed', error);
+          });
+          
+        });
+      </script>
+
 </body>
 </html>
