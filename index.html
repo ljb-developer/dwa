@@ -80,6 +80,24 @@ git
     a:visited {
         text-decoration: none;
     }
+
+
+  
+    .video-container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+   
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
     </style>
 </head>
 <body>
@@ -122,6 +140,13 @@ git
         <img src="images/video2.gif" class="collection"/>
         </div>
 
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+              <source src="music/CryptoWarriorsAnthem.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
         <a href="#start" id="play-btn2"><img src="images/video.gif" alt="Degens With Attitude" style="margin-bottom: 30px; width: 30%; border-radius: 10px; box-shadow: 0px 0px 60px rgba(140, 140, 140, 0.1), 0px 0px 100px rgba(140, 140, 140, 0.1);"></a>
 
         <div class="social-container">
@@ -154,7 +179,18 @@ git
           })
         });
 
+
+    // You can also add JavaScript functionality if you want to control the video
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Example: Play the video when the page loads
+    window.onload = function() {
+      videoPlayer.play();
+    };
+
+
       </script>
+
 
 </body>
 </html>
