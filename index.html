@@ -84,17 +84,22 @@ git
 
   
     .video-container {
-      max-width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 60%;
       margin: 0 auto;
       padding: 20px;
-      background-color: #333;
+      background-color: #000;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
    
     video {
-      width: 100%;
+
+      width: 80%;
       border-radius: 10px;
     }
 
@@ -141,7 +146,7 @@ git
         </div>
 
         <div class="video-container">
-            <video id="videoPlayer" controls>
+            <video id="videoPlayer" controls poster="music/CryptoWarriorsAnthem.png">
               <source src="music/CryptoWarriorsAnthem.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
